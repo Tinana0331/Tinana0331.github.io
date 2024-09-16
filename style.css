@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#banner{
+    background-color: hsl(28, 100%, 78%);
+    width: 800px;
+    height: 200px;
+    clear: both;
+    position: fixed;     /*這是註解：現在有設定fixed所以他會固定，但如果刪掉他會變得很醜xd 老師沒有給解方*/
+    top: 0px;
+    left: 0px;
+}
+
+#banner-placeholder {
+    height: 200px;
+ } 
+
+.container {
+    overflow: hidden; /*clear floats*/
+}
+
+#nav {
+    margin-top: 200 px;
+    background-color: #778ac3;
+    width: 100px;
+    float: left;
+    /*這是註解：我把原本有pedding的地方都刪掉了（我也不知道那是啥xd）*/
+    /*這是註解：原本你也有設定color 因為老師給在寫的時候還沒有設定我就刪了（後面content supporting 也是)*/
+}
+
+#content {
+   margin-top: 200 px;
+   background-color: #f2f2f2c1;
+   width: 600px;
+   height: 1000px;
+   float: left;
+}
+
+#supporting {
+    background-color: #ea9f9f;
+    width: 100px;
+    float: left;
+}
+
+#footer {
+    background-color: #94eaaf;
+    width: 800px;
+    height: 50px;
+    clear: both;
+}
