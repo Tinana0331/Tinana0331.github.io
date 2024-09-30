@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>完整範例網頁</title>
+    <style>
+        /* 基本全局設置 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Banner 樣式 */
+        .banner {
+            background-color: lavender; /* Banner 背景改為薰衣草色 */
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            width: 100vw; /* 佔滿整個瀏覽器的寬度 */
+        }
+
+        /* 導航列樣式 */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .navbar li a:hover {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        /* Section 樣式 */
+        .section {
+            height: 100vh; /* 每個區塊高度為一個視窗高度 */
+            width: 100vw; /* 佔滿瀏覽器寬度 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        /* Section 1 背景為粉藍色 */
+        .section1 {
+            background-color: lightblue;
+        }
+
+        /* Section 2 背景為鵝黃色 */
+        .section2 {
+            background-color: lightyellow;
+        }
+
+        /* Section 3 背景為淺綠色 */
+        .section3 {
+            background-color: lightgreen;
+        }
+
+        /* 間隔區塊的樣式 */
+        .separator {
+            height: 300vh; /* 300vh 的高度 */
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #333;
+            text-align: center; /* 文字居中 */
+        }
+
+        /* 調整內容區與頁面間距，避免被導航列遮擋 */
+        section {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner -->
+    <div id="banner" class="banner">
+        <h1>網站的標題</h1>
+    </div>
+
+    <!-- Navigator -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#banner">Banner</a></li>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section 1 -->
+    <div class="container-fluid">
+        <section id="section1" class="section section1">
+            <h2>Section 1 標題</h2>
+        </section>
+    </div>
+
+    <!-- 間隔內容區塊 -->
+    <div class="separator">
+        <p>這是 Section 1 之後的 300vh 的內容區塊。你可以在這裡放任何你想說的話。</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="container-fluid">
+        <section id="section2" class="section section2">
+            <h2>Section 2 標題</h2>
+        </section>
+    </div>
+
+    <!-- 間隔內容區塊 -->
+    <div class="separator">
+        <p>這是 Section 2 之後的 300vh 的內容區塊。這裡可以放一些額外的資訊或文字。</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="container-fluid">
+        <section id="section3" class="section section3">
+            <h2>Section 3 標題</h2>
+        </section>
+    </div>
+
+    <!-- Section 3 後面的間隔內容區塊 -->
+    <div class="separator">
+        <p>這是 Section 3 之後的 300vh 的內容區塊。你可以在這裡寫任何你想要的內容。</p>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+  
