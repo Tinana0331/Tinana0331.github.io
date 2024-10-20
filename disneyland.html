@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Color Change with Sticky Navbar</title>
+    <style>
+        /* 網頁的基本樣式 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+
+        /* 導航欄的樣式，使用 position: fixed 使其一直固定在最上方 */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            position: fixed; /* 固定於最上方 */
+            top: 0;
+            width: 100%; /* 讓導航欄的寬度填滿 */
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* 讓內容不被固定的導航欄遮擋 */
+        .spacer {
+            height: 60px; /* 給定與導航欄等高的空間 */
+        }
+
+        /* 背景圖片區域 */
+        .background-section {
+            height: 300vh;
+            background-image: url('https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/activities/ugplx2jllbcqiwkbzpjt.webp'); /* 替換成你想要的圖片 */
+            background-size: cover;
+            background-attachment: fixed; /* 背景固定 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            filter: grayscale(100%); /* 初始灰階 */
+            transition: filter 1s ease-in-out;
+        }
+
+        /* 當滾動後的彩色效果 */
+        .background-section.color {
+            filter: grayscale(0%);
+        }
+
+        /* 使用 Grid 的內容區 */
+        .content-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* 左邊2/3，右邊1/3 */
+            padding: 50px;
+        }
+
+        .content-section .text {
+            padding: 20px;
+            font-size: 1.2em;
+        }
+
+        .content-section .image {
+            padding: 20px;
+        }
+
+        .content-section .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Footer 樣式 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky 導航欄 -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#secrets">Secrets</a></li>
+            <li><a href="#stories">Stories</a></li>
+        </ul>
+    </nav>
+
+    <!-- 空白區域避免被導航欄擋住 -->
+    <div class="spacer"></div>
+
+    <!-- 第一區: 背景固定的區塊，起始為灰階 -->
+    <section class="background-section" id="home">
+        <div id="welcome-text">The Hidden Secrets & Stories of Disneyland</div>
+    </section>
+
+    <!-- 第二區: 使用 Grid 的內容區 -->
+    <section class="content-section" id="secrets">
+        <div class="text">
+            <h2>1.Disneyland does not sell chewing gum.</h2>
+            <p>
+                To keep the park clean, Disneyland does not sell chewing gum at any of its stores. The rule was created by Walt Disney himself, who wanted to ensure visitors weren't inconvenienced by stepping on sticky substances like chewed gum, cotton candy, or ice cream purchased in the park. While you’ll now find shops carrying cotton candy and ice cream, gum is still nowhere to be found (though guests are welcome to bring their own). 
+            </p>
+        </div>
+        <div class="image">
+            <img src="https://www.travelandleisure.com/thmb/H4Uu5NGiNXcM4tEMyM_KNO6zQ00=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-690542430-4c647ded2f9a48dab331646128d161ae.jpg" alt="Example image">
+        </div>
+    </section>
+
+    <!-- 第三區: 另一個背景固定的區塊 -->
+    <section class="background-section" id="stories">
+        <div>Step into the Story</div>
+    </section>
+
+    <!-- Footer 區域 -->
+    <footer>
+        &copy; 2024 My Webpage. All Rights Reserved.
+    </footer>
+
+    <!-- 加入 JavaScript 來實現滾動時的效果 -->
+    <script>
+        // 當網頁滾動時觸發的事件
+        window.addEventListener('scroll', function() {
+            const homeSection = document.getElementById('home');
+            const welcomeText = document.getElementById('welcome-text');
+            const rect = welcomeText.getBoundingClientRect();
+
+            // 當 "Welcome to My Webpage" 文字進入可視區域時，將背景變成彩色
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                homeSection.classList.add('color'); // 加入彩色效果
+            } else {
+                homeSection.classList.remove('color'); // 保持灰階
+            }
+        });
+    </script>
+
+</body>
+</html>
