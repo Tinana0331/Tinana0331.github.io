@@ -1,0 +1,60 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Sections */
+.leading-section, .middle-section, .ending-section {
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    visibility: hidden; /* 預設隱藏影片，進入範圍後顯示 */
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.overlay h1 {
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+
+
+
