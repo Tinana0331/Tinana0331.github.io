@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #87ceeb, #005377, #002b40);
+    background-attachment: fixed;
+  }
+  
+  .section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #div1 {
+    height: 50vh; /* 縮小 div1 高度 */
+    background: transparent;
+  }
+  
+  #div2, #div3, #div4 {
+    background: url('ocean-background.jpg') center center / cover no-repeat fixed; /* 一片海洋背景 */
+  }
+  
+  .plastic-title {
+    font-size: 4rem; /* 放大標題 */
+    text-align: center;
+    margin-top: 30vh;
+    color: white;
+    position: relative;
+  }
+  
+  #particle-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  #marine-animals {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 50px;
+  }
+  
+  .parallax-item {
+    width: 150px; /* 放大海洋生物 */
+    opacity: 0;
+  }
+  
+  #plastic-waste {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+  }
+  
+  .plastic-item {
+    width: 80px;
+  }
+  
+  #annotations {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
